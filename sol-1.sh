@@ -10,8 +10,8 @@ touch ~/devops_project/scripts/deploy.sh
 echo "#!/bin/bash" > ~/devops_project/scripts/deploy.sh
 
 # Step 4: Add commands to save the size and permissions to logs/tree.txt
-echo "du -h ~/devops_project/ > ~/devops_project/logs/tree.txt" >> ~/devops_project/scripts/deploy.sh
-echo "ls -lR ~/devops_project/ >> ~/devops_project/logs/tree.txt" >> ~/devops_project/scripts/deploy.sh
+echo "du -h ~/devops_project/ > ~/devops_project/logs/tree.txt" 
+echo "ls -lR ~/devops_project/ >> ~/devops_project/logs/tree.txt" 
 
 # Step 5: Change the permissions to make the script executable by the owner only
 chmod u+x ~/devops_project/scripts/deploy.sh
