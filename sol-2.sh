@@ -14,7 +14,7 @@ sudo passwd devops_user
 sudo chage -d 0 devops_user
 
 # Add devops_user to sudo group for superuser privileges
-sudo usermod -aG sudo devops_user
+visudo
 
 # Create intern_user and add to the devops group
 sudo useradd -m -G devops intern_user
