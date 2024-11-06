@@ -52,6 +52,29 @@ resource "aws_security_group" "web_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+variable "internet_gateway_id" {
+  type    = string
+  default = "igw-02d0f5ee75f2588bc"  
+}
+
+
+resource "aws_route_table" "public_rt" {
+  vpc_id = data.aws_vpc.default.id
+
+  route {
+    cidr_block = "0.0.0.0/0"
+    gateway_id = var.internet_gateway_id
+  }
+
+  tags = {
+    Name = "PublicRouteTable"
+  }
+}
+
+resource "aws_route_table_association" "public_rt_assoc" {
+  subnet_id      = aws_subnet.public_subnet.id
+  route_table_id = aws_route_table.public_rt.id
+}
 
 data "aws_ami" "amazon_linux" {
   most_recent = true
