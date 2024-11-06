@@ -30,13 +30,13 @@ Next, I created an **EC2 instance** using the **Amazon Linux 2 AMI** and **t2.mi
 ## Screenshots
 
 ### 1. **Terraform Plan Output**
-![Terraform Plan Output](images\plan.png)
+![Terraform Plan Output](terraform-sol/images/plan.png)
 ### 2. **AWS Console: VPC and Subnets**
-![AWS Console VPC and Subnets](images\subnets.png)
+![AWS Console VPC and Subnets](terraform-sol/images/subnets.png)
 
 ### 3. **AWS Console: EC2 Instance**
-![AWS Console EC2](images\ec2.png)
+![AWS Console EC2](terraform-sol/images/ec2.png)
 
 ### 4. **Security Group Settings**
-![AWS Console Security Group](images\sg.png)
+![AWS Console Security Group](terraform-sol/images/sg.png)
 
